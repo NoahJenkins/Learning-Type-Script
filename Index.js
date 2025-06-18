@@ -39,4 +39,4 @@ console.log("Cash in register", cashInRegister
 )
 console.log("Order queue:", orderQue)
 
-t
+Text
