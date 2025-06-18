@@ -38,5 +38,3 @@ console.log("Menu")
 console.log("Cash in register", cashInRegister
 )
 console.log("Order queue:", orderQue)
-
-Text
