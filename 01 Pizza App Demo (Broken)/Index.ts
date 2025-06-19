@@ -5,8 +5,8 @@ let menu = [
     {name: "Pineapple", price: 10}
 ]
 
-let cashInRegister: = 100
-let nextOrderId = 1
+let cashInRegister: number = 100
+let nextOrderId: number = 1
 let orderQue = []
 
 function addNewPizza(pizzaObj) {
@@ -32,7 +32,7 @@ function completeOrder(orderId) {
 
 }
 
-addNewPizza({ name: "Veggie", cost: menu.Veggie.price})
+addNewPizza({ name: "Veggie", cost: 8})
 addNewPizza({ name: "Cheese", cost: 8})
 
 placeOrder("Veggie")
