@@ -1,3 +1,4 @@
+// Import the 'fs' module to enable writing output logs to a file
 import * as fs from 'fs';
 
 type Pizza = {
