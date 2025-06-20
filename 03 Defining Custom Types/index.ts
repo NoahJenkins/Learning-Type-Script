@@ -3,8 +3,20 @@ type Food = string
 
 let favoriteFood: Food = "pizza"
 
-let person2 = {
+type Person = {
+    name: string,
+    age: number,
+    isStudent: boolean
+}
+
+let person1 = {
     name: "Jill",
     age: 66, 
     isStudent: false
+}
+
+let person2: Person = {
+    name:"John",
+    age: 33,
+    isStudent: true
 }

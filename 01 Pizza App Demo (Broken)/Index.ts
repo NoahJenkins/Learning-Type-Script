@@ -1,3 +1,14 @@
+type Pizza = {
+    name: string,
+    price: number
+}
+
+type Order = {
+    id: number, 
+    pizza: Pizza, 
+    status: string,
+}
+
 let menu = [
     {name: "Cheese", price: 8}, 
     {name: "Pepperoni", price: 10},
@@ -9,7 +20,7 @@ let cashInRegister: number = 100
 let nextOrderId: number = 1
 let orderQue = []
 
-function addNewPizza(pizzaObj) {
+function addNewPizza(pizzaObj: Pizza) {
     menu.push(pizzaObj)
 }
 
@@ -20,7 +31,7 @@ function placeOrder(pizzaName) {
         return
     }
     cashInRegister += selectedPizza.price
-    const newOrder = { id: nextOrderId++, pizza: selectedPizza, status: "ordred"}
+    const newOrder: Order = { id: nextOrderId++, pizza: selectedPizza, status: "ordred"}
     orderQue.push(newOrder)
     return newOrder
 }
@@ -32,8 +43,8 @@ function completeOrder(orderId) {
 
 }
 
-addNewPizza({ name: "Veggie", cost: 8})
-addNewPizza({ name: "Cheese", cost: 8})
+addNewPizza({ name: "Veggie", price: 8})
+addNewPizza({ name: "Cheese", price: 8})
 
 placeOrder("Veggie")
 completeOrder("1")
