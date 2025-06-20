@@ -18,13 +18,13 @@ let menu = [
 
 let cashInRegister: number = 100
 let nextOrderId: number = 1
-let orderQue = []
+let orderQue: Order[] = []
 
 function addNewPizza(pizzaObj: Pizza) {
     menu.push(pizzaObj)
 }
 
-function placeOrder(pizzaName) {
+function placeOrder(pizzaName: string) {
     let selectedPizza = menu.find(pizzaObj => pizzaObj.name === pizzaName)
     if (!selectedPizza) {
         console.error(`${pizzaName} does not exist in the menue`)
@@ -36,18 +36,19 @@ function placeOrder(pizzaName) {
     return newOrder
 }
 
-function completeOrder(orderId) {
-    let order = menu.find(orderQue => orderQue.id === orderId)
-    order.status = "completed"
+function completeOrder(orderId: number) {
+    let order = orderQue.find(order => order.id === orderId)
+    if (order) {
+        order.status = "completed"
+    }
     return order
-
 }
 
 addNewPizza({ name: "Veggie", price: 8})
 addNewPizza({ name: "Cheese", price: 8})
 
-placeOrder("Veggie")
-completeOrder("1")
+completeOrder(1)
+completeOrder(1)
 
 console.log("Menu")
 console.log("Cash in register", cashInRegister
