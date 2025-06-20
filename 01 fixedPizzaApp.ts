@@ -116,6 +116,7 @@ function completeOrder(orderId: number) {
 // console.log("Script completed. If you see this, everything ran to the end.");
 // process.exit(0);
 
+function getPizzaDetails(identifier: string | number){}
 
 addNewPizza({ id: 5, name: "Vegan Cheese", price: 8})
 addNewPizza({ id: 6, name: "BBQ Chicken", price: 10})
